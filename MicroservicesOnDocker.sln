@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B7A077E0-1D63-455F-89C7-2B3CA3C3E100}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroservicesOnDocker", "MicroservicesOnDocker\MicroservicesOnDocker.csproj", "{77C00C74-2E25-4FA0-88A2-4815AD60B071}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroservicesOnDocker.School.Api", "MicroservicesOnDocker.School.Api\MicroservicesOnDocker.School.Api.csproj", "{CAA352CB-E0BD-4C7F-90AC-0DF99D3096A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroservicesOnDocker.Income.Api", "MicroservicesOnDocker.Income.Api\MicroservicesOnDocker.Income.Api.csproj", "{D9741F10-DD55-479E-8B11-F4DACD81ACD6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{77C00C74-2E25-4FA0-88A2-4815AD60B071}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77C00C74-2E25-4FA0-88A2-4815AD60B071}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77C00C74-2E25-4FA0-88A2-4815AD60B071}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77C00C74-2E25-4FA0-88A2-4815AD60B071}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAA352CB-E0BD-4C7F-90AC-0DF99D3096A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAA352CB-E0BD-4C7F-90AC-0DF99D3096A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAA352CB-E0BD-4C7F-90AC-0DF99D3096A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAA352CB-E0BD-4C7F-90AC-0DF99D3096A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9741F10-DD55-479E-8B11-F4DACD81ACD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9741F10-DD55-479E-8B11-F4DACD81ACD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9741F10-DD55-479E-8B11-F4DACD81ACD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9741F10-DD55-479E-8B11-F4DACD81ACD6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AEACB2CC-6114-4C33-9D6F-133F72D9DCAB}
+	EndGlobalSection
+EndGlobal
