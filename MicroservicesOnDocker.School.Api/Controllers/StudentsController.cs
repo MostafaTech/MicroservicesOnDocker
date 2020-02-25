@@ -17,15 +17,18 @@ namespace MicroservicesOnDocker.School.Api.Controllers
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<ViewModels.StudentBrief>> Get()
+        public async Task<ActionResult<IEnumerable<Dtos.StudentDto>>> Get()
         {
             var students = _ds.GetStudents();
             var courses = _ds.GetCourses();
-            var payments = _ds.GetPayments();
-            return students.Select(x => new ViewModels.StudentBrief
+            var payments = await Infrastructure.ServiceHelpers.GetServiceData<List<Dtos.StudentPaymentDto>>(
+                Infrastructure.ServiceHelpers.IncomeService, "payments");
+            return students.Select(x => new Dtos.StudentDto
             {
+                StudentId = x.Id,
                 StudentName = x.Name,
-                CourseName = courses.Single(y => y.Id == x.CourseId).Name,
+                CourseId = x.CourseId,
+                CourseName = x.CourseId.HasValue ? courses.Single(y => y.Id == x.CourseId).Name : "",
                 HasPayed = payments.Any(y => y.StudentId == x.Id && y.CourseId == x.CourseId)
             }).ToList();
         }

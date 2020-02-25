@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  school_service:
+    image: mcr.microsoft.com/dotnet/core/aspnet:2.2
+    volumes:
+      - ./school_service:/app
+    working_dir: /app
+    command: dotnet "MicroservicesOnDocker.School.Api.dll"
+    ports:
+      - 5001:80
+  income_service:
+    image: mcr.microsoft.com/dotnet/core/aspnet:2.2
+    volumes:
+      - ./income_service:/app
+    working_dir: /app
+    command: dotnet "MicroservicesOnDocker.Income.Api.dll"
+    ports:
+      - 5002:80

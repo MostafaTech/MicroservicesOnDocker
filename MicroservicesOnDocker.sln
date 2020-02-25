@@ -6,15 +6,18 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B7A077E0-1D63-455F-89C7-2B3CA3C3E100}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+		docker-compose.yml = docker-compose.yml
 		LICENSE = LICENSE
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroservicesOnDocker", "MicroservicesOnDocker\MicroservicesOnDocker.csproj", "{77C00C74-2E25-4FA0-88A2-4815AD60B071}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroservicesOnDocker", "MicroservicesOnDocker\MicroservicesOnDocker.csproj", "{77C00C74-2E25-4FA0-88A2-4815AD60B071}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroservicesOnDocker.School.Api", "MicroservicesOnDocker.School.Api\MicroservicesOnDocker.School.Api.csproj", "{CAA352CB-E0BD-4C7F-90AC-0DF99D3096A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroservicesOnDocker.School.Api", "MicroservicesOnDocker.School.Api\MicroservicesOnDocker.School.Api.csproj", "{CAA352CB-E0BD-4C7F-90AC-0DF99D3096A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroservicesOnDocker.Income.Api", "MicroservicesOnDocker.Income.Api\MicroservicesOnDocker.Income.Api.csproj", "{D9741F10-DD55-479E-8B11-F4DACD81ACD6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroservicesOnDocker.Income.Api", "MicroservicesOnDocker.Income.Api\MicroservicesOnDocker.Income.Api.csproj", "{D9741F10-DD55-479E-8B11-F4DACD81ACD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroservicesOnDocker.Infrastructure", "MicroservicesOnDocker.Infrastructure\MicroservicesOnDocker.Infrastructure.csproj", "{AB7EC69F-7DBC-49FC-8F93-0D2796E8972A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,6 +37,10 @@ Global
 		{D9741F10-DD55-479E-8B11-F4DACD81ACD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9741F10-DD55-479E-8B11-F4DACD81ACD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9741F10-DD55-479E-8B11-F4DACD81ACD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB7EC69F-7DBC-49FC-8F93-0D2796E8972A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB7EC69F-7DBC-49FC-8F93-0D2796E8972A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB7EC69F-7DBC-49FC-8F93-0D2796E8972A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB7EC69F-7DBC-49FC-8F93-0D2796E8972A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

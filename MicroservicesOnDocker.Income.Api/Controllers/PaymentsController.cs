@@ -17,14 +17,16 @@ namespace MicroservicesOnDocker.Income.Api.Controllers
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<ViewModels.StudentPayment>> Get()
+        public ActionResult<IEnumerable<Dtos.StudentPaymentDto>> Get()
         {
             var payments = _ds.GetPayments();
             var courses = _ds.GetCourses();
             var students = _ds.GetStudents();
-            return payments.Select(x => new ViewModels.StudentPayment
+            return payments.Select(x => new Dtos.StudentPaymentDto
             {
+                StudentId = x.StudentId,
                 StudentName = students.Single(y => y.Id == x.StudentId).Name,
+                CourseId = x.CourseId,
                 CourseName = courses.Single(y => y.Id == x.CourseId).Name,
                 PayAmount = x.PayAmount
             }).ToList();

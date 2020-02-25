@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MicroservicesOnDocker.Infrastructure\MicroservicesOnDocker.Infrastructure.csproj" />
     <ProjectReference Include="..\MicroservicesOnDocker\MicroservicesOnDocker.csproj" />
   </ItemGroup>
 
