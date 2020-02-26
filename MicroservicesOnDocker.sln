@@ -19,6 +19,27 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroservicesOnDocker.Incom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroservicesOnDocker.Infrastructure", "MicroservicesOnDocker.Infrastructure\MicroservicesOnDocker.Infrastructure.csproj", "{AB7EC69F-7DBC-49FC-8F93-0D2796E8972A}"
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "MicroservicesOnDocker.UI", "MicroservicesOnDocker.UI\", "{3EB6AD9F-3D9C-4D2C-8B4A-856D3AE318F9}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_57859"
+		Debug.AspNetCompiler.PhysicalPath = "MicroservicesOnDocker.UI\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57859\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_57859"
+		Release.AspNetCompiler.PhysicalPath = "MicroservicesOnDocker.UI\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57859\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "57859"
+		SlnRelativePath = "MicroservicesOnDocker.UI\"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +62,10 @@ Global
 		{AB7EC69F-7DBC-49FC-8F93-0D2796E8972A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB7EC69F-7DBC-49FC-8F93-0D2796E8972A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB7EC69F-7DBC-49FC-8F93-0D2796E8972A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EB6AD9F-3D9C-4D2C-8B4A-856D3AE318F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EB6AD9F-3D9C-4D2C-8B4A-856D3AE318F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EB6AD9F-3D9C-4D2C-8B4A-856D3AE318F9}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EB6AD9F-3D9C-4D2C-8B4A-856D3AE318F9}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -9,6 +9,6 @@ namespace MicroservicesOnDocker.Dtos
         public string StudentName { get; set; }
         public long? CourseId { get; set; }
         public string CourseName { get; set; }
-        public bool HasPayed { get; set; }
+        public bool hasPaid { get; set; }
     }
 }

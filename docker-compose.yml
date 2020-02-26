@@ -1,6 +1,15 @@
 version: '3'
 
 services:
+  ui:
+    image: nginx:1.17.8-alpine
+    volumes:
+      - ./ui:/usr/share/nginx/html
+    ports:
+      - 80:80
+    depends_on:
+      - school_service
+      - income_service
   school_service:
     image: mcr.microsoft.com/dotnet/core/aspnet:2.2
     volumes:

@@ -29,7 +29,7 @@ namespace MicroservicesOnDocker.School.Api.Controllers
                 StudentName = x.Name,
                 CourseId = x.CourseId,
                 CourseName = x.CourseId.HasValue ? courses.Single(y => y.Id == x.CourseId).Name : "",
-                HasPayed = payments.Any(y => y.StudentId == x.Id && y.CourseId == x.CourseId)
+                hasPaid = payments.Any(y => y.StudentId == x.Id && y.CourseId == x.CourseId)
             }).ToList();
         }
     }
