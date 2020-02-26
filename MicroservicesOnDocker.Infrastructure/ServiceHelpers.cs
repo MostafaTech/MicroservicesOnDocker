@@ -16,7 +16,7 @@ namespace MicroservicesOnDocker.Infrastructure
 
         public static async Task<T> GetServiceData<T>(string service, string action)
         {
-            var restClient = new RestSharp.RestClient($"http://{service}/api/");
+            var restClient = new RestSharp.RestClient($"http://{service}/");
             var restRequest = new RestSharp.RestRequest(action, RestSharp.Method.GET, RestSharp.DataFormat.Json);
             var restResponse = await restClient.ExecuteAsync<T>(restRequest);
             if (restResponse.IsSuccessful)

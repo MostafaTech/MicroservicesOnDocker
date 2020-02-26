@@ -5,8 +5,8 @@ Vue.config.productionTip = false
 
 // http
 import { CreateHttpService } from './services/ajax'
-Vue.prototype.$schoolService = CreateHttpService(process.env.NODE_ENV == 'development' ? 57801 : 5001);
-Vue.prototype.$incomeService = CreateHttpService(process.env.NODE_ENV == 'development' ? 57802 : 5002);
+Vue.prototype.$schoolService = CreateHttpService('school');
+Vue.prototype.$incomeService = CreateHttpService('income');
 
 new Vue({
   render: h => h(App)

@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace MicroservicesOnDocker.Income.Api.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     public class PaymentsController
     {
         private readonly Database.DataStore _ds;

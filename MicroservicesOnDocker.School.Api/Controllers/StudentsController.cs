@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace MicroservicesOnDocker.School.Api.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     public class StudentsController
     {
         private readonly Database.DataStore _ds;
