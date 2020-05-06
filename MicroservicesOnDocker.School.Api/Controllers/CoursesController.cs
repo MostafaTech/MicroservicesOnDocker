@@ -8,18 +8,18 @@ namespace MicroservicesOnDocker.School.Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class CoursesController
+    public class CoursesController : ControllerBase
     {
-        private readonly Database.DataStore _ds;
-        public CoursesController()
+        private readonly Database.IStore _store;
+        public CoursesController(Database.IStore store)
         {
-            _ds = new Database.DataStore();
+            _store = store;
         }
 
         [HttpGet]
         public ActionResult<IEnumerable<Models.Course>> Get()
         {
-            return _ds.GetCourses();
+            return _store.GetCourses();
         }
     }
 }

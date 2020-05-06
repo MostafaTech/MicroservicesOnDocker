@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace MicroservicesOnDocker.Database
 {
-    public class DataStore
+    public class DataStore : IStore
     {
         public List<Models.Course> GetCourses()
         {
@@ -38,6 +38,21 @@ namespace MicroservicesOnDocker.Database
                 new Models.Payment { Id = 4, StudentId = 4, CourseId = 2, PayAmount = 3000m },
                 //new Models.Payment { Id = 5, StudentId = 5, CourseId = 2, PayAmount = 3000m },
             };
+        }
+
+        public void AddCourse(Models.Course course)
+        {
+            // do nothing
+        }
+
+        public void AddStudent(Models.Student student)
+        {
+            // do nothing
+        }
+
+        public void AddPayment(Models.Payment payment)
+        {
+            // do nothing
         }
     }
 }

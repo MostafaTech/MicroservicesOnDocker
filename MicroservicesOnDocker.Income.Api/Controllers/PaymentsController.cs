@@ -8,20 +8,20 @@ namespace MicroservicesOnDocker.Income.Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class PaymentsController
+    public class PaymentsController : ControllerBase
     {
-        private readonly Database.DataStore _ds;
-        public PaymentsController()
+        private readonly Database.IStore _store;
+        public PaymentsController(Database.IStore store)
         {
-            _ds = new Database.DataStore();
+            _store = store;
         }
 
         [HttpGet]
         public ActionResult<IEnumerable<Dtos.StudentPaymentDto>> Get()
         {
-            var payments = _ds.GetPayments();
-            var courses = _ds.GetCourses();
-            var students = _ds.GetStudents();
+            var payments = _store.GetPayments();
+            var courses = _store.GetCourses();
+            var students = _store.GetStudents();
             return payments.Select(x => new Dtos.StudentPaymentDto
             {
                 StudentId = x.StudentId,
@@ -35,7 +35,7 @@ namespace MicroservicesOnDocker.Income.Api.Controllers
         [HttpGet("{studentId}/{courseId}")]
         public ActionResult<decimal> Get(long studentId, long courseId)
         {
-            var payments = _ds.GetPayments();
+            var payments = _store.GetPayments();
             var requestedPayment = payments.FirstOrDefault(x => x.StudentId == studentId && x.CourseId == courseId);
             if (requestedPayment != null)
                 return requestedPayment.PayAmount;

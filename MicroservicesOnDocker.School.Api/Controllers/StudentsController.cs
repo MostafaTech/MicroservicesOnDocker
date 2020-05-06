@@ -8,19 +8,19 @@ namespace MicroservicesOnDocker.School.Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class StudentsController
+    public class StudentsController : ControllerBase
     {
-        private readonly Database.DataStore _ds;
-        public StudentsController()
+        private readonly Database.IStore _store;
+        public StudentsController(Database.IStore store)
         {
-            _ds = new Database.DataStore();
+            _store = store;
         }
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Dtos.StudentDto>>> Get()
         {
-            var students = _ds.GetStudents();
-            var courses = _ds.GetCourses();
+            var students = _store.GetStudents();
+            var courses = _store.GetCourses();
             var payments = await Infrastructure.ServiceHelpers.GetServiceData<List<Dtos.StudentPaymentDto>>(
                 Infrastructure.ServiceHelpers.IncomeService, "payments");
             return students.Select(x => new Dtos.StudentDto
