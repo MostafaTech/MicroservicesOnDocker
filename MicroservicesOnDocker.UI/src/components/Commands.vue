@@ -6,15 +6,10 @@
 </template>
 
 <script>
+    import { mapActions } from 'vuex'
     export default {
-        data: () => ({
-            list: []
-        }),
         methods: {
-            addSampleData() {
-                this.$schoolService.post('/commands/addSampleData').then(r => {
-                })
-            }
+            ...mapActions(['addSampleData']),
         }
     }
 </script>

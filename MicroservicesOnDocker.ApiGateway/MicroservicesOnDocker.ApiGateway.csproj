@@ -11,4 +11,10 @@
     <PackageReference Include="Ocelot" Version="13.5.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Dockerfile">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

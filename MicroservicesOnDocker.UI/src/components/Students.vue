@@ -16,14 +16,16 @@
 </template>
 
 <script>
-export default {
-    data: () => ({
-        list: []
-    }),
-    mounted() {
-        this.$schoolService.get('/students').then(r => {
-            this.list = r.data;
-        })
+    import { mapGetters, mapActions } from 'vuex'
+    export default {
+        computed: {
+            ...mapGetters({ list: 'students' })
+        },
+        mounted() {
+            this.loadStudents()
+        },
+        methods: {
+            ...mapActions(['loadStudents'])
+        }
     }
-}
 </script>

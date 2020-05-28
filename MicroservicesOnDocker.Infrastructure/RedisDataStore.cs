@@ -7,6 +7,11 @@ namespace MicroservicesOnDocker.Infrastructure
 {
     public class RedisDataStore : Database.IStore
     {
+#if DEBUG
+        public const string RedisAddress = "192.168.99.101";
+#else
+        public const string RedisAddress = "redis";
+#endif
         private const string Key_Courses = "MicroservicesOnDocker_Courses";
         private const string Key_Students = "MicroservicesOnDocker_Students";
         private const string Key_Payments = "MicroservicesOnDocker_Payments";
@@ -14,7 +19,7 @@ namespace MicroservicesOnDocker.Infrastructure
         private readonly IDatabase _db;
         public RedisDataStore()
         {
-            _connection = ConnectionMultiplexer.Connect("192.168.99.101");
+            _connection = ConnectionMultiplexer.Connect(RedisAddress);
             _db = _connection.GetDatabase();
         }
 

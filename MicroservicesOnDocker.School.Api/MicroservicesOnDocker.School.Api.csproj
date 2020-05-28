@@ -16,4 +16,10 @@
     <ProjectReference Include="..\MicroservicesOnDocker\MicroservicesOnDocker.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Dockerfile">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

@@ -1,12 +1,14 @@
 import axios from 'axios'
 
+// create gateway url
 var baseAddress = window.location.origin;
-if (baseAddress.lastIndexOf(':') > 5)
-    baseAddress = baseAddress.substr(0, baseAddress.lastIndexOf(':'))
+var gateway_address = process.env.NODE_ENV == 'development' ?
+    '//localhost:57800' :
+    `//api_gateway.${window.location.host}`;
+console.log('gateway url: ' + gateway_address);
 
 export const CreateHttpService = serviceName => {
-    var apiGatewayPort = process.env.NODE_ENV == 'development' ? '57800' : '5000';
     return axios.create({
-        baseURL: `${baseAddress}:${apiGatewayPort}/${serviceName}/`,
+        baseURL: `${gateway_address}/${serviceName}/`,
     });
 };

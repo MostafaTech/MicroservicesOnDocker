@@ -14,14 +14,16 @@
 </template>
 
 <script>
-export default {
-    data: () => ({
-        list: []
-    }),
-    mounted() {
-        this.$incomeService.get('/payments').then(r => {
-            this.list = r.data;
-        })
+    import { mapGetters, mapActions } from 'vuex'
+    export default {
+        computed: {
+            ...mapGetters({ list: 'payments' })
+        },
+        mounted() {
+            this.loadPayments()
+        },
+        methods: {
+            ...mapActions(['loadPayments'])
+        }
     }
-}
 </script>
